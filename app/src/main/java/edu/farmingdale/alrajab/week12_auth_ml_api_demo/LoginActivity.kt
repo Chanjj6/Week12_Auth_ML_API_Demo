@@ -25,6 +25,9 @@ class LoginActivity : AppCompatActivity() {
         binding.loginBtn.setOnClickListener{
             login();
         }
+        binding.googlelogo.setOnClickListener{
+            googlesignin()
+        }
     }
 
     private fun login() {
@@ -47,7 +50,10 @@ class LoginActivity : AppCompatActivity() {
 
         }
     }
-
+    private fun googlesignin(){
+        val intent = Intent(this, GoogleSignInActivity::class.java)
+        startActivity(intent)
+    }
 
 
 
